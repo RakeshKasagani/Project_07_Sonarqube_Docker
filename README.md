@@ -60,7 +60,7 @@ sudo yum install docker -y
 ```
 
 ```
-Sudo systemctl start docker
+sudo systemctl start docker
 ```
 
 ```
