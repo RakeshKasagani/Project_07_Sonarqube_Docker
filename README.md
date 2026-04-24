@@ -46,6 +46,12 @@ A SonarQube token (we’ll create SonarQube server locally and generate token).
 
 Basic familiarity with terminal commands (I’ll include exact commands).
 
+ ### Install git
+   ```
+   sudo yum install git -y
+   git --version
+   ```
+
 ### 2. Set up Docker (so we can run Jenkins & Sonar easily):
 
 ```
