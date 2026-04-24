@@ -48,11 +48,17 @@ Basic familiarity with terminal commands (I’ll include exact commands).
 
 ### 2. Set up Docker (so we can run Jenkins & Sonar easily):
 
-```sudo yum install docker -y```
+```
+sudo yum install docker -y
+```
 
-```Sudo systemctl start docker```
+```
+Sudo systemctl start docker
+```
 
-`sudo docker pull sonarqube`
+```
+sudo docker pull sonarqube
+```
 
 ### http://<your-server-ip>:9000
 
