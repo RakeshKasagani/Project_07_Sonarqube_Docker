@@ -48,6 +48,7 @@ Basic familiarity with terminal commands (I’ll include exact commands).
 
  ### Install git
    ```
+   sudo yum update -y
    sudo yum install git -y
    git --version
    ```
