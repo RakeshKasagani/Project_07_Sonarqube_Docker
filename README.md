@@ -65,6 +65,7 @@ sudo systemctl start docker
 
 ```
 sudo docker pull sonarqube
+sudo docker run -d -p 9000:9000 --name sonarqube sonarqube
 ```
 
 ### http://<your-server-ip>:9000
