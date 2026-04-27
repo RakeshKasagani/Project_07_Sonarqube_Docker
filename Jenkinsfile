@@ -21,8 +21,8 @@ pipeline {
                             ${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=my-devops-app \
                             -Dsonar.sources=. \
-                            -Dsonar.host.url=http://100.31.207.72:9000 \
-                            -Dsonar.login=sqa_0f2bf923e17a56492dd20538efac8d697c96fce7
+                            -Dsonar.host.url=http://3.95.11.213:9000 \
+                            -Dsonar.login=sqa_7644d5275a02c5785e54ee64174f57d864e3e625
                         """
                     }
                 }
