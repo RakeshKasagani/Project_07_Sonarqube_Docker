@@ -152,7 +152,49 @@ If Jenkins runs on the same host and will build/run Docker images, add jenkins u
 ```
 sudo usermod -aG docker jenkins
 ```
+Step 1 — Add Jenkins to Docker group
 
+Run:
+```
+sudo usermod -aG docker jenkins
+```
+🔧 Step 2 — Restart services
+```
+sudo systemctl restart docker
+sudo systemctl restart jenkins
+```
+🔧 Step 3 — Verify
+
+Switch to jenkins user:
+```
+sudo su - jenkins
+docker ps
+```
+Expected:
+No permission error
+Shows running containers or empty list
+⚠️ If still failing
+
+Run this to confirm group applied:
+
+groups jenkins
+Expected output:
+jenkins docker
+🔁 If NOT showing docker group
+
+Run again:
+```
+sudo usermod -aG docker jenkins
+sudo reboot
+```
+👉 Reboot ensures group membership is applied properly
+
+🚫 Alternative (NOT recommended but quick test)
+
+You can bypass permissions temporarily:
+```
+sudo chmod 666 /var/run/docker.sock
+```
 ### 9. Create Jenkins Pipeline Job
 
 ### Jenkins → New Item → name project10-pipeline → Pipeline → OK.
