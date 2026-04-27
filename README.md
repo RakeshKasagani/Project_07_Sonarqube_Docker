@@ -139,9 +139,9 @@ Manage Jenkins → Credentials → System → Global credentials → Add Credent
 
 **Secret:** <your-sonar-token>
 
-**ID:** SONARQUBE_TOKEN (choose this ID)
+**ID:** sonar-token
 
-**Description:** SonarQube token
+**save**
 
 We’ll reference this in the pipeline.
 
