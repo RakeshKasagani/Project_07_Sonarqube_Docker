@@ -22,7 +22,7 @@ pipeline {
                             -Dsonar.projectKey=my-devops-app \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://3.95.11.213:9000 \
-                            -Dsonar.login=sqa_7644d5275a02c5785e54ee64174f57d864e3e625
+                            -Dsonar.login=sqa_28f89779d3f9a6e373ee82fbcf699c0152593d59
                         """
                     }
                 }
