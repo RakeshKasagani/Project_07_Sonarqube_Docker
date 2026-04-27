@@ -79,11 +79,12 @@ Default credentials: admin / admin (log in and change password).
 ### 4. Install Jenkins (on same server )
 ```
 sudo yum update –y
+sudo yum install wget -y
 sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 sudo yum upgrade
-sudo sudo dnf install java-21-amazon-corretto -y
+sudo dnf install java-21-amazon-corretto -y
 sudo yum install jenkins -y
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
