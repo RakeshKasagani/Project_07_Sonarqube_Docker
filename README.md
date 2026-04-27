@@ -102,7 +102,7 @@ In Jenkins UI → Manage Jenkins → Manage Plugins:
 
 Git plugin
 
-Pipeline
+Pipeline stage view
 
 Docker Pipeline
 
