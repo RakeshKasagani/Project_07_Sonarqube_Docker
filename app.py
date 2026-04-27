@@ -14,7 +14,7 @@ products = [
      "image": "/static/images/npk.jpg"},
     {"id": 5, "name": "Organic Compost", "price": 500,
      "image": "/static/images/compost.jpg"},
-    {"id": 6, "name": "Vermicompost", "price": 600,
+    {"id": 6, "name": "vermicompost", "price": 600,
      "image": "/static/images/vermicompost.jpg"},
 ]
 
