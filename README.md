@@ -85,8 +85,9 @@ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 sudo yum upgrade
 sudo sudo dnf install java-21-amazon-corretto -y
 sudo yum install jenkins -y
+sudo systemctl start jenkins
 sudo systemctl enable jenkins
-sudo systemctl start jenkins  
+sudo systemctl status jenkins  
 ```
 Access Jenkins: http://<server-ip>:8080.
 Follow initial unlock instructions (use the /var/lib/jenkins/secrets/initialAdminPassword).
