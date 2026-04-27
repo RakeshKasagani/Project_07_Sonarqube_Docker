@@ -147,7 +147,9 @@ We’ll reference this in the pipeline.
 
 If Jenkins runs on the same host and will build/run Docker images, add jenkins user to docker group:
 
-`sudo usermod -aG docker jenkins`
+```
+sudo usermod -aG docker jenkins
+```
 
 ### 9. Create Jenkins Pipeline Job
 
