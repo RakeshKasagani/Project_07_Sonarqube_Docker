@@ -2,20 +2,20 @@ from flask import Flask, render_template_string, redirect, url_for
 
 app = Flask(__name__)
 
-# Product data with images
+# Product data with LOCAL images
 products = [
     {"id": 1, "name": "Urea Fertilizer", "price": 300,
-     "image": "https://via.placeholder.com/150?text=Urea"},
+     "image": "/static/images/urea.jpg"},
     {"id": 2, "name": "DAP Fertilizer", "price": 1200,
-     "image": "https://via.placeholder.com/150?text=DAP"},
+     "image": "/static/images/dap.jpg"},
     {"id": 3, "name": "Potash Fertilizer", "price": 800,
-     "image": "https://via.placeholder.com/150?text=Potash"},
+     "image": "/static/images/potash.jpg"},
     {"id": 4, "name": "NPK Fertilizer", "price": 950,
-     "image": "https://via.placeholder.com/150?text=NPK"},
+     "image": "/static/images/npk.jpg"},
     {"id": 5, "name": "Organic Compost", "price": 500,
-     "image": "https://via.placeholder.com/150?text=Compost"},
+     "image": "/static/images/compost.jpg"},
     {"id": 6, "name": "Vermicompost", "price": 600,
-     "image": "https://via.placeholder.com/150?text=Vermi"},
+     "image": "/static/images/vermicompost.jpg"},
 ]
 
 cart = []
