@@ -204,3 +204,57 @@ sudo chmod 666 /var/run/docker.sock
 If from SCM, choose Git, repo URL and Branch main, script path Jenkinsfile.
 
 Save and Build Now.
+
+### verify that your application is actually running and accessible.
+
+### Go to:
+**AWS Console → EC2 → Instances → Your instance → Security → Security Groups**
+
+Add inbound rule:
+Type: Custom TCP
+Port: 5000
+Source: 0.0.0.0/0
+
+✔ Save the rule 
+
+### 🎯 Step 1 — Check if container is running
+
+On your Jenkins/EC2 server:
+
+docker ps
+✅ Expected output:
+
+You should see your app container, something like:
+
+my-devops-app   ...   0.0.0.0:5000->5000
+
+👉 Important:
+
+Container must be Up
+Port mapping must exist (host_port:container_port)
+### 🎯 Step 2 — Identify the port
+
+From your docker run command (in Jenkinsfile), check:
+
+Example:
+
+docker run -d -p 5000:5000 my-devops-app
+
+👉 This means:
+
+App runs on port 5000
+### 🎯 Step 3 — Test locally on server
+
+Run:
+
+curl http://localhost:5000
+✅ Expected:
+HTML response OR JSON response
+
+👉 If this fails → app is not running correctly
+
+🎯 Step 4 — Open in browser (important)
+
+Use your EC2 public IP:
+
+http://<your-ec2-public-ip>:5000
