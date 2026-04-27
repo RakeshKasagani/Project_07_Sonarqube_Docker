@@ -220,8 +220,9 @@ Source: 0.0.0.0/0
 ### 🎯 Step 1 — Check if container is running
 
 On your Jenkins/EC2 server:
-
+```
 docker ps
+```
 ✅ Expected output:
 
 You should see your app container, something like:
@@ -237,9 +238,9 @@ Port mapping must exist (host_port:container_port)
 From your docker run command (in Jenkinsfile), check:
 
 Example:
-
+```
 docker run -d -p 5000:5000 my-devops-app
-
+```
 👉 This means:
 
 App runs on port 5000
@@ -248,6 +249,7 @@ App runs on port 5000
 Run:
 
 curl http://localhost:5000
+
 ✅ Expected:
 HTML response OR JSON response
 
